@@ -22,7 +22,7 @@ client.on("message", (message) => {
 
   if (message.content.toLowerCase().startsWith(prefix + `help`)) {
     const embed = new Discord.RichEmbed()
-    .setTitle(`:mailbox_with_mail: Vulnix Help`)
+    .setTitle(`:mailbox_with_mail: Txeee Help`)
     .setColor(0xCF40FA)
     .setDescription(`Hello! I'm Vulnix, the Discord bot for super cool support ticket stuff and more! Here are my commands:`)
     .addField(`Tickets`, `[${prefix}new]() > Opens up a new ticket and tags the Support Team\n[${prefix}close]() > Closes a ticket that has been resolved or been opened by accident`)
@@ -68,7 +68,7 @@ if (message.content.toLowerCase().startsWith(prefix + `close`)) {
 
     message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`-confirm\`. This will time out in 10 seconds and be cancelled.`)
     .then((m) => {
-      message.channel.awaitMessages(response => response.content === '-confirm', {
+      message.channel.awaitMessages(response => response.content === '&confirm', {
         max: 1,
         time: 10000,
         errors: ['time'],
